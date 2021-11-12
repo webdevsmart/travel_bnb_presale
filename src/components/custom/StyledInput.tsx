@@ -15,7 +15,7 @@ export const InputDiv = styled.div`
   flex-direction: column;
   justify-content: space-between;
   grid-gap: 15px;
-  width: 100%;
+  width: calc(100% - 150px);
 `;
 
 export const BtnDiv = styled.div`
@@ -29,11 +29,31 @@ export const BtnDiv = styled.div`
   background-color: #eeeeee;
   border-radius: 31px;
   height: 77px;
+  transition: 0.2s linear;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    width: 130px;
+    transition: 0.2s linear;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 18px;
+    width: 100px;
+    transition: 0.2s linear;
+  }
 `;
 
 export const InputLabel = styled.div`
   color: #868686;
   font-size: 22px;
+  transition: 0.2s linear;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    transition: 0.2s linear;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 18px;
+    transition: 0.2s linear;
+  }
 `;
 
 export const Input = styled.input`
@@ -42,5 +62,14 @@ export const Input = styled.input`
   font-size: 28px;
   ::placeholder {
     color: #ddd;
+  }
+  transition: 0.2s linear;
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+    transition: 0.2s linear;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 22px;
+    transition: 0.2s linear;
   }
 `;

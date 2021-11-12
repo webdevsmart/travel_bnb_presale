@@ -2,6 +2,7 @@ import React from "react";
 import {
   ConnectWalletBtn,
   HeaderDescDiv,
+  HeaderResponsiveTitle,
   HeaderTextPartDiv,
   HeaderTitle,
   HeaderTitleDiv,
@@ -30,6 +31,12 @@ const HeaderTextPart = () => {
           Connect Wallet
         </ConnectWalletBtn>
       </HeaderTitleDiv>
+      <HeaderResponsiveTitle>
+        <div className="main_title">Buy TravelBNB</div>
+        <div className="sub_title">
+          MIN: ~0.05 BNB / MAX: ~5 BNB (+GAS BNB / BEP20)
+        </div>
+      </HeaderResponsiveTitle>
       <HeaderDescDiv>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
         purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor

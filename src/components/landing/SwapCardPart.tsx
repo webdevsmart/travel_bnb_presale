@@ -46,8 +46,8 @@ const SwapCardPart = () => {
         BUY Travelbnb
       </BuyBtn>
       <CardDesc>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-        <br /> aliquam, purus sit amet luctus venenatis, lectus magna fringilla
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
+        purus sit amet luctus venenatis, lectus magna fringilla
       </CardDesc>
     </SwapCardPartDiv>
   );
