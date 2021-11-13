@@ -8,10 +8,16 @@ import {
   HeaderTitleDiv,
   TravelBNBBtn,
 } from "./StyledLanding";
+import { useEthers } from "@usedapp/core";
 import travelBtn from "assets/TravelBNBBtn.svg";
 import metaImg from "assets/metamask.svg";
 
 const HeaderTextPart = () => {
+  const { activateBrowserWallet, account } = useEthers();
+
+  function handleConnectWallet() {
+    activateBrowserWallet();
+  }
   return (
     <HeaderTextPartDiv>
       <HeaderTitleDiv>
@@ -24,11 +30,21 @@ const HeaderTextPart = () => {
             MIN: ~0.05 BNB / MAX: ~5 BNB (+GAS BNB / BEP20)
           </div>
         </HeaderTitle>
-        <ConnectWalletBtn>
+        <ConnectWalletBtn
+          onClick={() => {
+            handleConnectWallet();
+          }}
+        >
           <div>
             <img src={metaImg} alt="metaImg" />
           </div>
-          Connect Wallet
+
+          {account
+            ? `${account.slice(0, 6)}...${account.slice(
+                account.length - 4,
+                account.length
+              )}`
+            : "Connect Wallet"}
         </ConnectWalletBtn>
       </HeaderTitleDiv>
       <HeaderResponsiveTitle>
